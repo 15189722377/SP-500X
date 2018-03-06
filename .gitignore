@@ -42,6 +42,14 @@
 *.idb
 *.pdb
 *.crf
+*.lx
+*.htm
+*.axf
+*.sct
+*.dep
+*.lst
+
+SP500X-910/MDKProject/OBJ
 
 # Kernel Module Compile Results
 *.mod*

@@ -41,29 +41,24 @@
 
 //每个结构体占用的字节数
 #define BYTE_OF_PER_REG		100
-#define BYTE_OF_PER_REG_OLD		40
 
 //system_status存储位置起始地址
 #define SYS_STATUS_SADDR		(REG_STORAGE_ADDR + 0*BYTE_OF_PER_REG)
 
 //comm_settings存储位置起始地址
 #define COM_SET_SADDR			(REG_STORAGE_ADDR + 1*BYTE_OF_PER_REG)
-#define COM_SET_SADDR_OLD			(REG_STORAGE_ADDR + 1*BYTE_OF_PER_REG_OLD)
 
 //measure_settings存储位置起始地址
 #define MEASURE_SET_SADDR		(REG_STORAGE_ADDR + 2*BYTE_OF_PER_REG)
-#define MEASURE_SET_SADDR_OLD		(REG_STORAGE_ADDR + 2*BYTE_OF_PER_REG_OLD)
 
 //calib_settings存储位置起始地址
 #define CAL_SET_SADDR			(REG_STORAGE_ADDR + 3*BYTE_OF_PER_REG)
-#define CAL_SET_SADDR_OLD			(REG_STORAGE_ADDR + 3*BYTE_OF_PER_REG_OLD)
 
 //filter_settings存储位置起始地址
 #define FILTER_SET_SADDR		(REG_STORAGE_ADDR + 4*BYTE_OF_PER_REG)
-#define FILTER_SET_SADDR_OLD		(REG_STORAGE_ADDR + 4*BYTE_OF_PER_REG_OLD)
 
 //sensor_param存储位置起始地址
-#define CONDUCT_PARA_SADDR		(REG_STORAGE_ADDR + 5*BYTE_OF_PER_REG)  //sensor_param 暂未启用
+#define CONDUCT_PARA_SADDR		(REG_STORAGE_ADDR + 5*BYTE_OF_PER_REG)  
 
 /* Exported_Functions ---------------------------------------------------------*/
 uint16_t STMFLASH_ReadHalfWord(uint32_t rd_addr);

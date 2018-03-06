@@ -222,5 +222,22 @@ void USART2_IRQHandler(void)
     //清除中断标志
     USART_ClearITPendingBit(USART2, USART_IT_TC);
   }
+	
+	if(USART_GetFlagStatus(USART2,USART_FLAG_ORE)==SET)
+  {
+    USART_ClearFlag(USART2,USART_FLAG_ORE); 
+  }	
+	if(USART_GetFlagStatus(USART2,USART_FLAG_NE))
+	{
+		USART_ClearFlag(USART2,USART_FLAG_NE); 
+	}
+	if(USART_GetFlagStatus(USART2,USART_FLAG_FE))
+	{
+		USART_ClearFlag(USART2,USART_FLAG_FE); 
+	}
+  if(USART_GetFlagStatus(USART2,USART_FLAG_PE))
+	{
+		USART_ClearFlag(USART2,USART_FLAG_PE); 
+	}	
 }
 

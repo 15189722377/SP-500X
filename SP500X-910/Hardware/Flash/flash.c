@@ -46,8 +46,7 @@ RegStoreType regs_sturct[REG_TYPE_NUM]=
 	{&calib_settings,CALSREG_NREGS},
 	{&filter_settings,FSREG_NREGS},
 //	{&measure_values,MVREG_NREGS},
-	{&sensor_param,SENSORREG_NREGS}
-  
+	{&sensor_param,SENSORREG_NREGS}  
 };
 
 /* Private_Variables ----------------------------------------------------------*/
@@ -130,7 +129,7 @@ static FLASH_Status STMFLASH_Write(void *pdata,uint8_t num_to_write)
 	//下一个结构体的存储起始地址
 	cnt += BYTE_OF_PER_REG;
 	//zb  消除偏移
-	if(cnt == 500)///5*100
+	if(cnt == REG_TYPE_NUM*BYTE_OF_PER_REG)
 	{
 		cnt=0;
 	}
@@ -190,6 +189,9 @@ void RestoreModbusReg(void)
   {
 		Param_Reset();
 	}
+	system_status.runStatus=0;
+	system_status.commStatus=0;
+	system_status.calibStatus=0;
   measure_settings.command=0;
 	memset(system_status.hardwareVer,0,sizeof(system_status.hardwareVer));
 	memset(system_status.softwareVer,0,sizeof(system_status.softwareVer));

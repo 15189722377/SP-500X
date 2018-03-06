@@ -17,6 +17,7 @@
 #define CMD_RESETT_PARAM	  2
 #define CMD_CALIB_ZERO	    3
 #define CMD_CALIB_SLOPE		  4
+#define CMD_JUMP_BOOTLOADER 5
 
 //系统相关寄存器声明
 extern SYS_STATUS_T system_status;
