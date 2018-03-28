@@ -47,7 +47,7 @@ void Param_Reset(void)
 	measure_settings.reserved1=0;
 	measure_settings.reserved2=0;
 	
-	comm_settings.modbusAddr=0x0E;	
+	comm_settings.modbusAddr=0x26;	
 	comm_settings.modbusDatabits=8;
 	comm_settings.modbusParity=MODBUS_PARITY_EVEN;
 	comm_settings.modbusBaud=9600;
