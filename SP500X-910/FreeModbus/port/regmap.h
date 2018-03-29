@@ -100,14 +100,14 @@ typedef struct measureValues
 // All sensor specific registers start from 48001
 // ÔİÊ±Ã»¿ª±Ù
 typedef	struct sensorParam
-{											/* Register		Type  		 R/W */	
+{										/* Register		Type  		 R/W */	
 	uint16 	led;						/* 48001	16bit integer	 r/w */
-	uint16 	ledCurrent;			/* 48002	16bit integer	 r/w */
-	uint16 	pdChannel;			/* 48003	16bit integer	 r/w */
-	uint16 	sampleTimes;	  /* 48004	16bit integer	 r/w */
-	uint16 	adcResult;			/* 48004	16bit integer	 r/w */
-	uint16  dark;           /* 48006 */
-	uint16  reserved[10];   /* 48007-48016 */
+	uint16 	ledCurrent;					/* 48002	16bit integer	 r/w */
+	uint16 	pdChannel;					/* 48003	16bit integer	 r/w */
+	uint16 	sampleTimes;	  			/* 48004	16bit integer	 r/w */
+	uint16 	adcResult;					/* 48005	16bit integer	 r/w */
+	uint16  dark;           			/* 48006 */
+	uint16  reserved[10];   			/* 48007-48016 */
 } SENSOR_PARAM_T;
 
 #pragma pack()
